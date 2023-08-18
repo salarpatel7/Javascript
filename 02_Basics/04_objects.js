@@ -44,4 +44,18 @@ const tinderUser={}
 //  console.log(Object.entries(tinderUser));
 //if u wanna know ex name property is there or not in object 
 
-console.log(tinderUser.hasOwnProperty('sa')) //
+ //console.log(tinderUser.hasOwnProperty('sa'))
+//---------------------------------------
+
+
+
+const course = {
+   coursename: "javascript in hindi",
+   price: "999",
+   courseInstructor:"hitesh"
+}
+
+//deStructure of object 
+const {courseInstructor:teacher} = course
+
+console.log(teacher);
