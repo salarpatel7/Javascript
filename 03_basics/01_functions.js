@@ -44,4 +44,34 @@ function loginUser(username){
     return `${username} just logged in`
 }
 
-console.log(loginUser());
+//console.log(loginUser());
+
+function calculateCarPrice(...num1){
+    return num1
+}
+
+//console.log(calculateCarPrice(200,300,400));
+
+const cart={
+    username: "salar",
+    price:199
+}
+
+function handleObject(anyobject){
+    console.log(`user is ${anyobject.username} and its price is ${anyobject.price}`);
+}
+
+//handleObject(cart)
+
+// handleObject({
+//     username:'sam',
+//     price:'free20%'
+// })
+
+const myarry=[100,200,300,400]
+
+function returningArry(thisarry){
+ return thisarry[1]
+}
+
+console.log(returningArry(myarry));
