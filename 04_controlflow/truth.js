@@ -34,4 +34,12 @@ function(){}
 // }
 
 //nullish coaliecing operator (??)
- 
+
+//val1=5 ?? 10
+
+
+
+//ternary operator 
+const icecreamValue=80
+
+icecreamValue < 100 ? console.log('its cheap') : console.log('its costly');
