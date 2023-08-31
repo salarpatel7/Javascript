@@ -9,9 +9,24 @@
     
 </body>
 <script>
+   
      const div=document.createElement('div')
      console.log(div);
      div.className='main'
      div.id= Math.round(Math.random()*10 + 1)
+     div.setAttribute("title","generate title")
+     div.style.backgroundColor="green"
+     div.style.padding="12px"
+
+     const addText = document.createTextNode("salar patel is here")
+     div.appendChild(addText)
+
+     document.body.appendChild(div)
+
+
+     const heading1=document.createElement('h1')
+     const textinh1=document.createTextNode("hello world is finished")
+    //  heading1.appendChild(textinh1)
+     document.body.appendChild(textinh1)
 </script>
 </html>
