@@ -36,7 +36,9 @@ form.addEventListener('submit', function (e) {
         valid.innerHTML=`please type in numbers`
     }
     console.log(addition);
-    result.innerHTML = `<span>the result is ${addition}</span>`;
+    result.innerHTML = `<h1>the result is ${addition}</h1>`;
     console.log(addition);
     
 });
+
+
