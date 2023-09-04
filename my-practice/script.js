@@ -39,6 +39,14 @@ form.addEventListener('submit', function (e) {
     result.innerHTML = `<h1>the result is ${addition}</h1>`;
     console.log(addition);
     
+
+    
+
 });
 
+const clock = document.getElementById('clock')
 
+setInterval(function(){
+    let date = new Date()
+    clock.innerText=date.toLocaleTimeString()
+},1000)
