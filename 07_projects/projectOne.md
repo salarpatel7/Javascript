@@ -25,6 +25,38 @@ buttons.forEach(function (button) {
   });
 });
 
+## project 2 solution
+
+const form = document.querySelector('form');
+
+form.addEventListener('submit', function (e) {
+  e.preventDefault();
+
+  const height = parseInt(document.querySelector('#height').value);
+
+  const weight = parseInt(document.querySelector('#weight').value);
+  const results = document.querySelector('#results');
+  const bmiguide = document.querySelector('#bmiguide');
+
+  if (height === '' || height < 0 || isNaN(height)) {
+    result.innerHTML = `plz give valid height ${height}`;
+  } else if (weight === '' || weight < 0 || isNaN(weight)) {
+    result.innerHTML = `plz give valid height ${weight}`;
+  } else {
+    const bmi = (weight / ((height * height) / 10000)).toFixed(2);
+
+    //show the result
+    results.innerHTML = `<span>${bmi}</span>`;
+
+    if (bmi < 18) {
+      bmiguide.innerHTML = `<h3>This is under weight </h3>`;
+    } else if (bmi > 18 && bmi < 24) {
+      bmiguide.innerHTML = `<h3>this is normal range </h3> `;
+    } else {
+      bmiguide.innerHTML = `<h3>this is overweight </h3>`;
+    }
+  }
+});
 
 
 
