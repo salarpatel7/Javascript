@@ -50,3 +50,14 @@ setInterval(function(){
     let date = new Date()
     clock.innerText=date.toLocaleTimeString()
 },1000)
+
+
+const dice = document.querySelector('.dice')
+
+dice.addEventListener('click', function(e){
+    e.preventDefault()
+
+    console.log(parseInt(Math.random()*6))
+
+    dice.innerHTML=parseInt(Math.random()*6+1)
+})
