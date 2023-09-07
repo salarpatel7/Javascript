@@ -61,3 +61,7 @@ dice.addEventListener('click', function(e){
 
     dice.innerHTML=parseInt(Math.random()*6+1)
 })
+
+const promise1 = new Promise((resolve,reject)=>{
+    
+} )

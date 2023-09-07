@@ -40,5 +40,20 @@
     //     e.preventDefault()
     // },false)
  
+    document.querySelector('#images').addEventListener('click',function(e){
+        console.log(e.target.tagName);
+
+        if(e.target.tagName === "IMG"){
+                  
+        let removeitem = e.target.parentNode
+        //below both line works as a remove 
+        removeitem.remove()
+        // removeitem.parentNode.removeChild(removeitem)
+        
+        }
+
+
+      
+    },false)
 </script>
 </html>
