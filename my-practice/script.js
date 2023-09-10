@@ -82,4 +82,5 @@ function genhex(){
     return result
 }
 
-console.log(genHex());
+
+
