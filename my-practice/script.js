@@ -71,16 +71,24 @@ const promise1 = new Promise((resolve,reject)=>{
 // let genHex=[]
 // hexColor.push(genHex)
 // console.log(genHex);
-function genhex(){
-    const hexColor= "0123456789ABCDEF"
-    let result="#"
+// function genhex(){
+//     const hexColor= "0123456789ABCDEF"
+//     let result="#"
 
-    for (let index = 0; index < 6; index++) {
-        result+=hexColor[Math.floor(Math.random()*16)]
+//     for (let index = 0; index < 6; index++) {
+//         result+=hexColor[Math.floor(Math.random()*16)]
         
-    }
-    return result
-}
+//     }
+//     return result
+// }
 
 
+const hello=new Promise((resolve,reject)=>{
+    setTimeout(() => {
+        isReady = true
+        isReady ? resolve("soup is ready"): reject("no soup today")
+    }, 2000);
+})
 
+
+console.log(hello);
