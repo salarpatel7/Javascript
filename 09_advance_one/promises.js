@@ -55,3 +55,22 @@ promiseFour.then((user)=>{
 }).catch(function(error){
     console.log(error);
 }).finally(()=>console.log("the promise is either resolved or rejected"))
+
+
+const promiseFive=new Promise(function(resolve,reject){
+    setTimeout(function(){
+        let error=false
+        if(!error){
+            resolve({username:"javascript",passoword:"123"})
+        }
+        else{
+            reject("ERRROR: js went  wrong")
+        }
+    },1000)
+})
+
+async function cosumePromiseFive(){
+    const reponse=await promiseFive
+    console.log(reponse);
+}
+cosumePromiseFive()
