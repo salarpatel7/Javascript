@@ -89,9 +89,32 @@
 // }
 // getAllUsers()
 
-fetch('https://jsonplaceholder.typicode.com/todos/1')
-.then((resp)=>{
-    return resp.json()
-})
-.then((data)=>console.log(data))
-.catch((error)=>console.log(error))
+// fetch('https://jsonplaceholder.typicode.com/todos/1')
+// .then((resp)=>{
+//     return resp.json()
+// })
+// .then((data)=>console.log(data))
+// .catch((error)=>console.log(error))
+
+const superHeroToken='2450840285123031'
+const baseURL=`https://www.superheroapi.com/api.php/${superHeroToken}`
+const newHeroButton=document.getElementById('newHeroButton')
+
+const heroimageDiv=document.getElementById('heroImage')
+
+const getSuperHero=(id,name)=>{
+    fetch(`${baseURL}/${id}`)
+    .then(respnse=>respnse.json())
+    .then(json=>{
+        console.log(json)
+        heroimageDiv.innerHTML=`'<img src="${json.image.url}" height=200 width=200>'`
+    })
+}
+
+const randomHero = () => {
+    const numberOfHeroes = 731
+    return Math.floor(Math.random()* numberOfHeroes) + 1
+}
+console.log(randomHero())
+newHeroButton.onclick=()=>getSuperHero(randomHero())
+
