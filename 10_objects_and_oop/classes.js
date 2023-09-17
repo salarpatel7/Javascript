@@ -34,6 +34,11 @@
         console.log(this.currentSpeed);
        })
      }
+
+     stop(){
+        console.log('stop speed low ');
+        this.currentSpeed=0
+     }
  }
 
  const ferrari = new car('ferrrari','red',250)
@@ -48,3 +53,5 @@
 ferrari.zeroToSixty()
 console.log(ferrari.currentSpeed);
 ferrari.breaks()
+ferrari.stop()
+console.log(ferrari.currentSpeed);
