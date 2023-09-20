@@ -92,3 +92,8 @@ const hello=new Promise((resolve,reject)=>{
 
 
 console.log(hello);
+
+console.log("hello its working ")
+for(let i=0;i<5;i++){
+    console.log(i);
+}

@@ -19,7 +19,3 @@ const tea= new createUser("tea",250)
 
 chai.printme()
 
-console.log("hello its working ")
-for(let i=0;i<5;i++){
-    console.log(i);
-}
